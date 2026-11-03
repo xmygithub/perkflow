@@ -1,0 +1,11 @@
+{
+  "name": "perkflow-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch serve.mjs",
+    "check": "node --check src/app.js && node --check src/assistant-client.js && node --check src/assistant-page.js && node --check src/assistant-view.js && node --check src/voucher-client.js && node --check src/voucher-activity.js && node --check src/shop-client.js && node --check src/auth-client.js && node --check src/demo-store.js && node --check src/data.js && node --check serve.mjs",
+    "test": "node --test ../tests/frontend"
+  }
+}

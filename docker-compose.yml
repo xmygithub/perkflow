@@ -1,0 +1,27 @@
+# 当前只提供 RabbitMQ 本地开发环境；应用与 Worker 的消息集成按后续模块实现。
+name: perkflow
+
+services:
+  rabbitmq:
+    image: rabbitmq:4.3.6-management
+    # 固定节点主机名，使重建容器后仍使用数据卷中的相同节点目录。
+    hostname: perkflow-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:?Run python -m scripts.init_rabbitmq_env first}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:?Run python -m scripts.init_rabbitmq_env first}
+      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_VHOST:-perkflow}
+    ports:
+      - "127.0.0.1:5672:5672"
+      - "127.0.0.1:15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
+      start_period: 40s
+
+volumes:
+  rabbitmq_data:

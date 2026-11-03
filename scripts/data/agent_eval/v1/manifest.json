@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "dataset_id": "perkflow-agent-eval-v1",
+  "status": "prepared_not_run",
+  "created_on": "2026-10-19",
+  "task_count": 30,
+  "timezone": "Asia/Shanghai",
+  "source_sha256": {
+    "scripts/sql/002_demo_seed.sql": "c2916217730d9fcc538fcbb45c908bb6167115c200bf095ab0a16744f55dbe82",
+    "scripts/data/tianjin_catalog.json": "5882cb85ce1d60c154fc43fd72f53a6816b5c77f734d0e6f5a95a30d5f47c0e0",
+    "scripts/data/group_buy_rules.json": "ac0e6c71cdf6d3752dbb81ddfea465132d33d27ceccc9de6cc0dedb9996807b6"
+  },
+  "voucher_ids": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    3001,
+    3002,
+    3003,
+    3004,
+    3005,
+    3006
+  ],
+  "splits": {
+    "development": {
+      "file": "development.json",
+      "sha256": "1077c788bb7bd4de69b819fe3d29338b7e57819774b945ecdd78849fe587c825",
+      "tasks": 22,
+      "turns": 47
+    },
+    "reserved": {
+      "file": "reserved.json",
+      "sha256": "d1b7c865de2ea45282d375fc5d7a9119fe712c8d77d0ec32fd289e9b80c0e121",
+      "tasks": 8,
+      "turns": 22
+    }
+  },
+  "fixture_contract": {
+    "fresh_database_per_task": true,
+    "seed_order": [
+      "scripts.run_backend_tests.provision",
+      "scripts.seed_demo_catalog.seed",
+      "scripts.seed_group_buy_rules.seed"
+    ],
+    "initial_state_source": "task.initial_state overrides empty ConversationState; not real user state",
+    "time_anchor": "one run_started_at shared by all tasks; dates rendered using Asia/Shanghai",
+    "time_variables": [
+      "TODAY",
+      "TOMORROW",
+      "SATURDAY",
+      "MONDAY"
+    ],
+    "activity_window": "independent fixture active around anchor; normalize both voucher and activity stock before each task",
+    "events": "only isolated SQL overlays and synthetic purchase_reader history; no live MQ failure simulation",
+    "purchase_submission": "forbidden; preparation only; SQL order/request/authorization counts must remain zero",
+    "runtime_adapter": "not_implemented_in_this_stage"
+  },
+  "scoring": {
+    "automatic": "per-turn deterministic checks; all required turns must pass for task pass",
+    "manual": "each rubric pass/fail/uncertain plus evidence; uncertain is not pass",
+    "efficiency": "calls, tool requests, contract errors, reused observations, question count, duration, provider usage when available",
+    "reserved_policy": "freeze for later acceptance; not statistical independence or undisclosed real-world test set",
+    "gold_visibility": "never inject expectations or rubrics into model messages",
+    "questions": "max_questions is a quality diagnostic, not automatic business failure; manual review determines necessity"
+  },
+  "rubrics_sha256": "ca16f0f2eeac04f018d32d1aa5f963af752408245d75155919f897914e2c85d9",
+  "turn_count": 69
+}

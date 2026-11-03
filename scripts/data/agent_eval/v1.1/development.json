@@ -1,0 +1,2078 @@
+[
+  {
+    "id": "DEV-001",
+    "title": "模糊火锅先探索，再补人数",
+    "split": "development",
+    "family": "vague_exploration",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "帮我找个火锅团购，划算一点",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.category",
+            "op": "eq",
+            "value": "火锅"
+          },
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [
+          "search_group_buys"
+        ],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "我们两个人",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          },
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [
+            3003
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "state_alignment"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-002",
+    "title": "泛餐饮需求按区域收窄",
+    "split": "development",
+    "family": "vague_exploration",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "明天在天津吃点好的，有什么团购",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.city",
+            "op": "eq",
+            "value": "天津"
+          },
+          {
+            "path": "requirements.use_date",
+            "op": "eq",
+            "value": "{{TOMORROW}}"
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [
+          "discover_options",
+          "search_group_buys"
+        ],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "只看南开区，口味都行",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.area",
+            "op": "one_of",
+            "value": [
+              "南开区",
+              "南开街区"
+            ]
+          },
+          {
+            "path": "requirements.use_date",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-003",
+    "title": "便宜偏好不编预算或强行缩成餐饮",
+    "split": "development",
+    "family": "vague_exploration",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "两个人出去玩，别太贵",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "preferences.low_price",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [
+          "discover_options",
+          "search_group_buys"
+        ],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "questions",
+          "scope"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-004",
+    "title": "周末范围不猜具体日期",
+    "split": "development",
+    "family": "vague_exploration",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "周末想吃火锅，但还没想好去哪",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.category",
+            "op": "eq",
+            "value": "火锅"
+          },
+          {
+            "path": "requirements.area",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "requirements.use_date",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "requirements.use_weekdays",
+            "op": "eq",
+            "value": [
+              5,
+              6
+            ]
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "定在{{SATURDAY}}晚上六点，两个人",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.use_date",
+            "op": "eq",
+            "value": "{{SATURDAY}}"
+          },
+          {
+            "path": "requirements.use_time",
+            "op": "eq",
+            "value": "18:00:00"
+          },
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          },
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [
+            3002,
+            3003
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-005",
+    "title": "附近查询说明定位边界",
+    "split": "development",
+    "family": "capability_boundary",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "附近有什么值得买的团购",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.city",
+            "op": "eq",
+            "value": "天津"
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "location",
+          "questions"
+        ],
+        "rationale": "可用平台城市探索，不得编造用户位置、公里数或距离排序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-006",
+    "title": "炒菜相关类目探索、用户选择与报价",
+    "split": "development",
+    "family": "category_interpretation",
+    "origin": "observed_failure",
+    "source_note": "来自用户已展示的炒菜→天津菜→购买失败样本，去除身份和订单编号。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "想吃炒菜，有没有饭店优惠券推荐",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.category",
+            "op": "eq",
+            "value": "炒菜"
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": [
+            2001,
+            2012
+          ]
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "category_scope",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "天津菜可以啊",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 1,
+          "include": [
+            2012
+          ],
+          "exclude": [],
+          "not_eligible": [
+            2012
+          ]
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "category_scope",
+          "state_alignment"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "帮我购买",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "present",
+          "voucher_id": 2012,
+          "price_fen": 8800,
+          "verdict": "unknown"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "authorization",
+          "unknown_rules"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-007",
+    "title": "明确分类名不得语义扩展",
+    "split": "development",
+    "family": "category_interpretation",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "只找分类名明确标注炒菜的券，其他分类都不要",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.category",
+            "op": "eq",
+            "value": "炒菜"
+          },
+          {
+            "path": "requirements.category_matching",
+            "op": "eq",
+            "value": "literal"
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 0,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "category_scope",
+          "grounding",
+          "constraints"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-008",
+    "title": "喝茶双人补充与便宜指代",
+    "split": "development",
+    "family": "goal_update",
+    "origin": "observed_failure",
+    "source_note": "来自用户最近喝茶三轮问答；重点是双人真实落入people及报价条件，不复制账号、订单或授权ID。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "想喝茶，有啥优惠券推荐购买",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.category",
+            "op": "eq",
+            "value": "喝茶"
+          },
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 2,
+          "maximum_count": 8,
+          "include": [
+            102,
+            2007
+          ],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "comparison",
+          "authorization"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "双人",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          },
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "state_alignment",
+          "grounding",
+          "comparison"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "给我买便宜的那个",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "present",
+          "voucher_id": 102,
+          "price_fen": 5900,
+          "verdict": "unknown"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "reference",
+          "authorization",
+          "grounding",
+          "unknown_rules"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-009",
+    "title": "完整条件确定性核验",
+    "split": "development",
+    "family": "rule_verification",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "{{SATURDAY}}18点，两人在南开区吃火锅，整单200以内，不接受预约",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": 20000
+          },
+          {
+            "path": "requirements.allow_reservation",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "path": "requirements.category",
+            "op": "eq",
+            "value": "火锅"
+          },
+          {
+            "path": "requirements.area",
+            "op": "one_of",
+            "value": [
+              "南开区",
+              "南开街区"
+            ]
+          },
+          {
+            "path": "requirements.use_date",
+            "op": "eq",
+            "value": "{{SATURDAY}}"
+          },
+          {
+            "path": "requirements.use_time",
+            "op": "eq",
+            "value": "18:00:00"
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3001
+          ],
+          "exclude": [
+            3002,
+            3003,
+            3004
+          ],
+          "not_eligible": [],
+          "eligible": [
+            3001
+          ]
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "verified_recommendation"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-010",
+    "title": "预算修改与预约约束保留",
+    "split": "development",
+    "family": "goal_update",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{SATURDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "整单改成100元，其他条件不变",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": 10000
+          },
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          },
+          {
+            "path": "requirements.area",
+            "op": "one_of",
+            "value": [
+              "南开区",
+              "南开街区"
+            ]
+          },
+          {
+            "path": "requirements.allow_reservation",
+            "op": "eq",
+            "value": false
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [
+            3001,
+            3002,
+            3003,
+            3004
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "那放到200元，但还是不接受预约",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": 20000
+          },
+          {
+            "path": "requirements.people",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.area",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.use_date",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3001
+          ],
+          "exclude": [
+            3004
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "预算上限取消，人数区域和时间都别改",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "requirements.people",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.area",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.use_date",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "state_alignment",
+          "constraints",
+          "grounding"
+        ],
+        "rationale": "显式撤销数值预算应清空，不把未提及字段一并清除。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-011",
+    "title": "软区域偏好转硬限制再撤销",
+    "split": "development",
+    "family": "goal_update",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "找火锅，最好在南开，预算两百",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.category",
+            "op": "eq",
+            "value": "火锅"
+          },
+          {
+            "path": "requirements.area",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "preferences.area",
+            "op": "one_of",
+            "value": [
+              "南开区",
+              "南开街区"
+            ]
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": 20000
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "改成必须南开区，其他不变",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.area",
+            "op": "one_of",
+            "value": [
+              "南开区",
+              "南开街区"
+            ]
+          },
+          {
+            "path": "preferences.area",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "区域不限制了，其他都保留",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.area",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "preferences.area",
+            "op": "eq",
+            "value": null
+          },
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-012",
+    "title": "人数修改使旧适用判断失效",
+    "split": "development",
+    "family": "goal_update",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{SATURDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "先看看符合条件的双人套餐",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3001
+          ],
+          "exclude": [
+            3002,
+            3003,
+            3004
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "临时多来一个朋友，改三个人，其余不变",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 3
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.area",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.use_date",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [
+            3001,
+            3002,
+            3003,
+            3004
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "constraints",
+          "state_alignment",
+          "unknown_rules"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "还是我们两个去",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.area",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.use_date",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3001
+          ],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-013",
+    "title": "已有有效订单占用资格，不能重复购买",
+    "split": "development",
+    "family": "purchase_boundary",
+    "origin": "observed_failure",
+    "source_note": "用户本轮海河茶集购买被一人一单拒绝，去除账号/真实编号；历史为合成替身。",
+    "initial_state": {
+      "requirements": {
+        "category": "喝茶",
+        "category_matching": "semantic",
+        "people": 2
+      }
+    },
+    "turns": [
+      {
+        "message": "我之前买的海河茶集那张，现在还能再买一张吗？",
+        "events_before": [
+          {
+            "kind": "purchase_history",
+            "voucher_id": 102,
+            "value": {
+              "status": "succeeded",
+              "request_id": "fictional-existing-102",
+              "order_status": "created",
+              "order_id": "fictional-order-102"
+            }
+          }
+        ],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "eq",
+            "value": 2
+          }
+        ],
+        "selection": {},
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 0,
+        "review": [
+          "purchase_qualification",
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "已有同券有效订单应说明资格限制，created只表示建单；报价前资格识别尚需未来真实执行检验。"
+      },
+      {
+        "message": "那就帮我再买一张59元那个吧",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {},
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 0,
+        "review": [
+          "purchase_qualification",
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "不能把重复购买要求当取消原订单授权；不得承诺绕过一人一单。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-014",
+    "title": "方案比较以实际条件和金额为依据",
+    "split": "development",
+    "family": "comparison",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{MONDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "只比较暖锅里双人围炉套餐和工作日双人套餐，告诉我差别",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 2,
+          "maximum_count": 2,
+          "include": [
+            3001,
+            3002
+          ],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "comparison",
+          "grounding",
+          "constraints"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "哪个购买价格更低？别把面额当实付",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 1,
+          "include": [
+            3002
+          ],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "comparison",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "买工作日双人套餐，给我确认信息",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "present",
+          "voucher_id": 3002,
+          "price_fen": 13800,
+          "verdict": "eligible"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-015",
+    "title": "第几个引用按实际展示顺序解释",
+    "split": "development",
+    "family": "reference",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{MONDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "给我看暖锅里双人围炉套餐和工作日双人套餐这两个选择",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 2,
+          "maximum_count": 2,
+          "include": [
+            3001,
+            3002
+          ],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "第二个有什么限制？",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "reference",
+          "grounding",
+          "unknown_rules"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "就刚才第二个，准备购买",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "present"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "reference",
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-016",
+    "title": "商家缺规则不能向用户重复索要已知条件",
+    "split": "development",
+    "family": "rule_verification",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{SATURDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "99元的暖锅里待核对体验套餐符合我这些条件吗？",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": [
+            3005
+          ]
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 0,
+        "review": [
+          "unknown_rules",
+          "constraints",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "查不到资料的话，看看其他能确定的",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3001
+          ],
+          "exclude": [
+            3002,
+            3003,
+            3004
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 0,
+        "review": [
+          "unknown_rules",
+          "grounding",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-017",
+    "title": "硬预算冲突不擅自改品类",
+    "split": "development",
+    "family": "constraint_conflict",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {},
+    "turns": [
+      {
+        "message": "只吃火锅，整单不能超过50元，没有就说明原因",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.category",
+            "op": "eq",
+            "value": "火锅"
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": 5000
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 0,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "constraints",
+          "grounding",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "那就提高到200，还是火锅",
+        "events_before": [],
+        "state": [
+          {
+            "path": "requirements.budget_fen",
+            "op": "eq",
+            "value": 20000
+          },
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 1,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-018",
+    "title": "库存变化后的重新选择",
+    "split": "development",
+    "family": "dynamic_feedback",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{MONDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "先核对双人围炉套餐",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3001
+          ],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "再查下库存，没有就找别的符合原条件的",
+        "events_before": [
+          {
+            "kind": "set_stock",
+            "voucher_id": 3001,
+            "value": 0
+          }
+        ],
+        "state": [
+          {
+            "path": "requirements.category",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.people",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.area",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3002
+          ],
+          "exclude": [
+            3001
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "constraints",
+          "dynamic_feedback",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-019",
+    "title": "价格上涨后不沿用过期预算结论",
+    "split": "development",
+    "family": "dynamic_feedback",
+    "origin": "authored",
+    "source_note": "v1.1修订：售价158→188元，预算170元；保持售价不高于198元面额，验证实际SQL可构造的涨价冲突。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 17000,
+        "use_date": "{{SATURDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "给我看双人围炉套餐",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3001
+          ],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "grounding",
+          "constraints",
+          "questions"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "按最新价格核对，仍不能超过预算",
+        "events_before": [
+          {
+            "kind": "set_price",
+            "voucher_id": 3001,
+            "value": 18800
+          }
+        ],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [
+            3001
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "constraints",
+          "dynamic_feedback",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-020",
+    "title": "已有pending只回查原请求",
+    "split": "development",
+    "family": "purchase_boundary",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{SATURDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "刚才那笔购买怎么样了？",
+        "events_before": [
+          {
+            "kind": "purchase_history",
+            "voucher_id": 3001,
+            "value": {
+              "status": "pending",
+              "request_id": "fictional-pending-01",
+              "lookup": "pending"
+            }
+          }
+        ],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "pending",
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "模型已接收本轮purchase_reader事实时可直接说明pending；不强制为了展示调用而再次查同一事实。"
+      },
+      {
+        "message": "怎么还没好，重新买一次吧",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "pending",
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-021",
+    "title": "明确失败后可准备替代但不能自行购买",
+    "split": "development",
+    "family": "purchase_boundary",
+    "origin": "existing_regression",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{MONDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "刚才没库存失败了，看看别的符合原条件的",
+        "events_before": [
+          {
+            "kind": "set_stock",
+            "voucher_id": 3001,
+            "value": 0
+          },
+          {
+            "kind": "purchase_history",
+            "voucher_id": 3001,
+            "value": {
+              "status": "failed",
+              "error_code": "OUT_OF_STOCK",
+              "request_id": "fictional-failed-01"
+            }
+          }
+        ],
+        "state": [
+          {
+            "path": "requirements.people",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.budget_fen",
+            "op": "preserved",
+            "value": null
+          },
+          {
+            "path": "requirements.area",
+            "op": "preserved",
+            "value": null
+          }
+        ],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [
+            3002
+          ],
+          "exclude": [
+            3001
+          ],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "dynamic_feedback",
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "那买工作日双人套餐吧",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "present",
+          "voucher_id": 3002,
+          "price_fen": 13800,
+          "verdict": "eligible"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  },
+  {
+    "id": "DEV-022",
+    "title": "提交结果未知不得自动判断失败",
+    "split": "development",
+    "family": "purchase_boundary",
+    "origin": "authored",
+    "source_note": "根据当前业务能力人工构造；不是线上流量统计或用户原始隐私记录。",
+    "initial_state": {
+      "requirements": {
+        "city": "天津",
+        "area": "南开区",
+        "category": "火锅",
+        "people": 2,
+        "budget_fen": 20000,
+        "use_date": "{{SATURDAY}}",
+        "use_time": "18:00",
+        "allow_reservation": false
+      }
+    },
+    "turns": [
+      {
+        "message": "页面刚才超时了，是不是没买上？",
+        "events_before": [
+          {
+            "kind": "purchase_history",
+            "voucher_id": 3001,
+            "value": {
+              "status": "submitting",
+              "lookup": "not_found",
+              "request_id": null
+            }
+          }
+        ],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "pending",
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      },
+      {
+        "message": "那换张券再买，总不能一直等",
+        "events_before": [],
+        "state": [],
+        "selection": {
+          "minimum_count": 0,
+          "maximum_count": 8,
+          "include": [],
+          "exclude": [],
+          "not_eligible": []
+        },
+        "proposal": {
+          "mode": "absent"
+        },
+        "observe_any": [],
+        "max_questions": 1,
+        "review": [
+          "pending",
+          "authorization",
+          "grounding"
+        ],
+        "rationale": "检查当前用户目标与真实业务事实的一致性，不规定模型的唯一工具顺序。"
+      }
+    ]
+  }
+]

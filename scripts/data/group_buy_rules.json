@@ -1,0 +1,32 @@
+[
+  {
+    "shop_id": 1003, "shop_name": "暖锅里",
+    "voucher": {"id": 3001, "shop_id": 1003, "title": "暖锅里双人围炉套餐", "sub_title": "虚构演示套餐，周末可用，无需预约", "rules": ["适合2人，11:00至22:00使用，节假日按星期规则", "包含锅底、双人荤素拼盘及主食，范围内无额外费用", "虚构演示，不涉及真实支付或核销"], "pay_value": 15800, "actual_value": 19800, "type": 0, "status": 1, "total_stock": 30, "stock": 30, "validity_days": 30},
+    "usage": {"benefit_kind": "package", "min_people": 2, "max_people": 2, "package_items": ["锅底1份", "双人荤素拼盘", "双人主食"], "covers_meal": true, "allowed_weekdays": [0,1,2,3,4,5,6], "daily_start": "11:00:00", "daily_end": "22:00:00", "reservation_required": false, "extra_cost_fen": 0, "holiday_policy": "same_weekdays", "stackable": false, "note": "虚构演示；只核对列明套餐，不包含用户额外点单"}
+  },
+  {
+    "shop_id": 1003, "shop_name": "暖锅里",
+    "voucher": {"id": 3002, "shop_id": 1003, "title": "暖锅里工作日双人套餐", "sub_title": "虚构演示套餐，仅工作日使用", "rules": ["适合2人，仅周一至周五11:00至22:00", "节假日仍按星期规则，套餐范围内无额外费用", "虚构演示，不涉及真实支付或核销"], "pay_value": 13800, "actual_value": 18800, "type": 0, "status": 1, "total_stock": 30, "stock": 30, "validity_days": 30},
+    "usage": {"benefit_kind": "package", "min_people": 2, "max_people": 2, "package_items": ["锅底1份", "双人工作日拼盘", "双人主食"], "covers_meal": true, "allowed_weekdays": [0,1,2,3,4], "daily_start": "11:00:00", "daily_end": "22:00:00", "reservation_required": false, "extra_cost_fen": 0, "holiday_policy": "same_weekdays", "stackable": false, "note": "虚构演示；用于验证周末规则冲突"}
+  },
+  {
+    "shop_id": 1003, "shop_name": "暖锅里",
+    "voucher": {"id": 3003, "shop_id": 1003, "title": "暖锅里单人小锅套餐", "sub_title": "虚构演示套餐，仅适合1人", "rules": ["仅适合1人，每日11:00至22:00，节假日按星期规则", "套餐范围内无额外费用，不可叠加", "虚构演示，不涉及真实支付或核销"], "pay_value": 7900, "actual_value": 9900, "type": 0, "status": 1, "total_stock": 30, "stock": 30, "validity_days": 30},
+    "usage": {"benefit_kind": "package", "min_people": 1, "max_people": 1, "package_items": ["单人锅底", "单人荤素拼盘", "主食1份"], "covers_meal": true, "allowed_weekdays": [0,1,2,3,4,5,6], "daily_start": "11:00:00", "daily_end": "22:00:00", "reservation_required": false, "extra_cost_fen": 0, "holiday_policy": "same_weekdays", "stackable": false, "note": "虚构演示；单张券不等于任意人数可用"}
+  },
+  {
+    "shop_id": 1003, "shop_name": "暖锅里",
+    "voucher": {"id": 3004, "shop_id": 1003, "title": "暖锅里预约双人精选套餐", "sub_title": "虚构演示套餐，需要预约", "rules": ["适合2人，需先预约，每日11:00至22:00", "节假日按星期规则；套餐外另点不计入报价", "虚构演示，不涉及真实支付或核销"], "pay_value": 18800, "actual_value": 23800, "type": 0, "status": 1, "total_stock": 30, "stock": 30, "validity_days": 30},
+    "usage": {"benefit_kind": "package", "min_people": 2, "max_people": 2, "package_items": ["精选锅底", "双人精选荤素拼盘", "双人主食"], "covers_meal": true, "allowed_weekdays": [0,1,2,3,4,5,6], "daily_start": "11:00:00", "daily_end": "22:00:00", "reservation_required": true, "extra_cost_fen": 0, "holiday_policy": "same_weekdays", "stackable": false, "note": "虚构演示；本系统不提供预约或预约成功保证"}
+  },
+  {
+    "shop_id": 1003, "shop_name": "暖锅里",
+    "voucher": {"id": 3005, "shop_id": 1003, "title": "暖锅里待核对体验套餐", "sub_title": "虚构演示，使用资料未补全", "rules": ["套餐使用人数与日期待商户确认", "不能因资料缺失推断周末通用或无额外费用", "虚构演示，不涉及真实支付或核销"], "pay_value": 9900, "actual_value": 12900, "type": 0, "status": 1, "total_stock": 30, "stock": 30, "validity_days": 30},
+    "usage": {"benefit_kind": "package", "package_items": ["待核对体验内容"], "note": "虚构演示；用于验证信息不足时不作肯定推荐"}
+  },
+  {
+    "shop_id": 1014, "shop_name": "街角烤物",
+    "voucher": {"id": 3006, "shop_id": 1014, "title": "街角烤物双人烤肉分享套餐", "sub_title": "虚构演示套餐，意式风情区烧烤", "rules": ["适合2人，每日11:00至22:00，节假日按星期规则", "无需预约，套餐内无额外费用", "虚构演示，不涉及真实支付或核销"], "pay_value": 17800, "actual_value": 21800, "type": 0, "status": 1, "total_stock": 30, "stock": 30, "validity_days": 30},
+    "usage": {"benefit_kind": "package", "min_people": 2, "max_people": 2, "package_items": ["双人烤肉拼盘", "双人蔬菜与主食"], "covers_meal": true, "allowed_weekdays": [0,1,2,3,4,5,6], "daily_start": "11:00:00", "daily_end": "22:00:00", "reservation_required": false, "extra_cost_fen": 0, "holiday_policy": "same_weekdays", "stackable": false, "note": "虚构演示；用于多轮修改品类与区域"}
+  }
+]

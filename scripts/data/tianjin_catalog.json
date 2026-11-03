@@ -1,0 +1,1004 @@
+{
+  "shops": [
+    {
+      "id": 1001,
+      "type_id": 1,
+      "name": "津味小灶",
+      "subtitle": "一顿家常饭，吃得踏实",
+      "kind": "家常菜",
+      "city": "天津",
+      "area": "南开街区",
+      "address": "天津 · 南开街区 · 演示点位01（虚构地址）",
+      "images": [
+        "public/assets/photos/01.jpg",
+        "public/assets/photos/06.jpg",
+        "public/assets/photos/12.jpg"
+      ],
+      "tags": [
+        "朋友聚餐",
+        "日常午餐"
+      ],
+      "score": 4.5,
+      "avg_price": 4800,
+      "open_hours": "11:00–21:00",
+      "description": "设定有小份家常菜与分享菜，适合工作日午饭或朋友便餐。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1002,
+      "type_id": 1,
+      "name": "巷口面作",
+      "subtitle": "热汤热面，填饱小日子",
+      "kind": "面馆",
+      "city": "天津",
+      "area": "南开街区",
+      "address": "天津 · 南开街区 · 演示点位02（虚构地址）",
+      "images": [
+        "public/assets/photos/04.jpg",
+        "public/assets/photos/09.jpg",
+        "public/assets/photos/15.jpg"
+      ],
+      "tags": [
+        "独自用餐",
+        "日常午餐"
+      ],
+      "score": 4.4,
+      "avg_price": 2600,
+      "open_hours": "07:00–20:30",
+      "description": "以面食和小菜为演示菜单，设置单人用餐座位，便于比较低预算选项。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1003,
+      "type_id": 1,
+      "name": "暖锅里",
+      "subtitle": "围着一口锅，把话慢慢聊",
+      "kind": "火锅",
+      "city": "天津",
+      "area": "南开街区",
+      "address": "天津 · 南开街区 · 演示点位03（虚构地址）",
+      "images": [
+        "public/assets/photos/07.jpg",
+        "public/assets/photos/12.jpg",
+        "public/assets/photos/18.jpg"
+      ],
+      "tags": [
+        "朋友聚餐",
+        "多人分享"
+      ],
+      "score": 4.7,
+      "avg_price": 9200,
+      "open_hours": "11:00–23:00",
+      "description": "以多人分享火锅为演示场景，人均仅为参考，不代表实际点单金额。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1004,
+      "type_id": 1,
+      "name": "青禾轻食",
+      "subtitle": "午休时间，也能认真吃饭",
+      "kind": "轻食",
+      "city": "天津",
+      "area": "南开街区",
+      "address": "天津 · 南开街区 · 演示点位04（虚构地址）",
+      "images": [
+        "public/assets/photos/10.jpg",
+        "public/assets/photos/15.jpg",
+        "public/assets/photos/03.jpg"
+      ],
+      "tags": [
+        "独自用餐",
+        "清爽口味"
+      ],
+      "score": 4.3,
+      "avg_price": 3900,
+      "open_hours": "10:00–20:00",
+      "description": "演示菜单包含谷物碗与蔬菜组合，适合展示清爽口味偏好；不提供营养或医疗建议。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1005,
+      "type_id": 1,
+      "name": "桥畔饺子铺",
+      "subtitle": "一盘饺子，接住散步后的胃口",
+      "kind": "饺子馆",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位05（虚构地址）",
+      "images": [
+        "public/assets/photos/13.jpg",
+        "public/assets/photos/18.jpg",
+        "public/assets/photos/06.jpg"
+      ],
+      "tags": [
+        "亲子友好",
+        "家常口味"
+      ],
+      "score": 4.6,
+      "avg_price": 3500,
+      "open_hours": "10:30–21:00",
+      "description": "演示设定为家常饺子与热菜，可作为家庭便餐候选，具体口味需查看介绍。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1006,
+      "type_id": 1,
+      "name": "沿岸咖啡",
+      "subtitle": "散步累了，坐下来喝一杯",
+      "kind": "咖啡馆",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位06（虚构地址）",
+      "images": [
+        "public/assets/photos/16.jpg",
+        "public/assets/photos/03.jpg",
+        "public/assets/photos/09.jpg"
+      ],
+      "tags": [
+        "安静聊天",
+        "独自放松"
+      ],
+      "score": 4.6,
+      "avg_price": 4500,
+      "open_hours": "09:00–21:00",
+      "description": "演示设定包含咖啡和简餐、安静聊天座位，场景标签不是实时环境保证。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1007,
+      "type_id": 1,
+      "name": "河风甜品",
+      "subtitle": "把这一天，收在一口甜里",
+      "kind": "甜品店",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位07（虚构地址）",
+      "images": [
+        "public/assets/photos/01.jpg",
+        "public/assets/photos/06.jpg",
+        "public/assets/photos/12.jpg"
+      ],
+      "tags": [
+        "双人约会",
+        "下午茶"
+      ],
+      "score": 4.4,
+      "avg_price": 3200,
+      "open_hours": "11:00–22:00",
+      "description": "以甜品与饮品为演示内容，适合比较饭后休闲方案，不能作为正餐替代推荐。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1008,
+      "type_id": 1,
+      "name": "茶叙小屋",
+      "subtitle": "不赶路，留一下午给聊天",
+      "kind": "茶馆",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位08（虚构地址）",
+      "images": [
+        "public/assets/photos/04.jpg",
+        "public/assets/photos/09.jpg",
+        "public/assets/photos/15.jpg"
+      ],
+      "tags": [
+        "庭院茶室",
+        "安静聊天"
+      ],
+      "score": 4.5,
+      "avg_price": 5800,
+      "open_hours": "10:00–20:00",
+      "description": "演示设定为茶饮与小点，提供较低预算的茶馆对照，尚无真实预约信息。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1009,
+      "type_id": 1,
+      "name": "梧桐小馆",
+      "subtitle": "两个人的小晚餐，也有仪式感",
+      "kind": "西餐",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位09（虚构地址）",
+      "images": [
+        "public/assets/photos/07.jpg",
+        "public/assets/photos/12.jpg",
+        "public/assets/photos/18.jpg"
+      ],
+      "tags": [
+        "双人约会",
+        "朋友聚餐"
+      ],
+      "score": 4.6,
+      "avg_price": 7200,
+      "open_hours": "11:00–21:30",
+      "description": "演示菜单以意面和焗饭为主，供双人中等预算查询使用；人均不是双人套餐价。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1010,
+      "type_id": 1,
+      "name": "炉边披萨",
+      "subtitle": "一张披萨，分着吃更开心",
+      "kind": "披萨",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位10（虚构地址）",
+      "images": [
+        "public/assets/photos/10.jpg",
+        "public/assets/photos/15.jpg",
+        "public/assets/photos/03.jpg"
+      ],
+      "tags": [
+        "亲子友好",
+        "多人分享"
+      ],
+      "score": 4.5,
+      "avg_price": 6500,
+      "open_hours": "11:00–22:00",
+      "description": "演示设定有可分享披萨与烤物，用于家庭、朋友聚餐等不同偏好的比较。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1011,
+      "type_id": 1,
+      "name": "竹间日料",
+      "subtitle": "把晚饭安排得从容一点",
+      "kind": "日式料理",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位11（虚构地址）",
+      "images": [
+        "public/assets/photos/13.jpg",
+        "public/assets/photos/18.jpg",
+        "public/assets/photos/06.jpg"
+      ],
+      "tags": [
+        "双人约会",
+        "安静聊天"
+      ],
+      "score": 4.7,
+      "avg_price": 11800,
+      "open_hours": "11:30–14:00 / 17:00–21:30",
+      "description": "演示设定以定食和小份料理为主，午晚市分段营业；当前时段仍以文本展示。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1012,
+      "type_id": 1,
+      "name": "绿窗素食",
+      "subtitle": "蔬菜，也能成为一桌主角",
+      "kind": "素食",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位12（虚构地址）",
+      "images": [
+        "public/assets/photos/16.jpg",
+        "public/assets/photos/03.jpg",
+        "public/assets/photos/09.jpg"
+      ],
+      "tags": [
+        "清爽口味",
+        "朋友聚餐"
+      ],
+      "score": 4.4,
+      "avg_price": 5600,
+      "open_hours": "11:00–20:30",
+      "description": "演示设定为蔬食菜品，未提供过敏原或严格素食认证，不能据此保证特殊饮食安全。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1013,
+      "type_id": 1,
+      "name": "橄榄餐室",
+      "subtitle": "给重要的一餐，留足时间",
+      "kind": "西餐",
+      "city": "天津",
+      "area": "意式风情区",
+      "address": "天津 · 意式风情区 · 演示点位13（虚构地址）",
+      "images": [
+        "public/assets/photos/01.jpg",
+        "public/assets/photos/06.jpg",
+        "public/assets/photos/12.jpg"
+      ],
+      "tags": [
+        "双人约会",
+        "纪念日"
+      ],
+      "score": 4.8,
+      "avg_price": 16800,
+      "open_hours": "11:30–22:00",
+      "description": "作为较高预算西餐候选，演示菜单包含分享主菜；价格和评分均为虚构设定。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1014,
+      "type_id": 1,
+      "name": "街角烤物",
+      "subtitle": "天黑以后，约一顿热闹",
+      "kind": "烧烤",
+      "city": "天津",
+      "area": "意式风情区",
+      "address": "天津 · 意式风情区 · 演示点位14（虚构地址）",
+      "images": [
+        "public/assets/photos/04.jpg",
+        "public/assets/photos/09.jpg",
+        "public/assets/photos/15.jpg"
+      ],
+      "tags": [
+        "朋友聚餐",
+        "夜间小聚"
+      ],
+      "score": 4.5,
+      "avg_price": 7800,
+      "open_hours": "16:00–次日01:00",
+      "description": "以晚间烧烤为演示场景，跨日营业文本供后续时间模型设计参考，当前不计算营业状态。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1015,
+      "type_id": 1,
+      "name": "晨光早点社",
+      "subtitle": "早一点出门，吃一顿热乎的",
+      "kind": "早餐店",
+      "city": "天津",
+      "area": "意式风情区",
+      "address": "天津 · 意式风情区 · 演示点位15（虚构地址）",
+      "images": [
+        "public/assets/photos/07.jpg",
+        "public/assets/photos/12.jpg",
+        "public/assets/photos/18.jpg"
+      ],
+      "tags": [
+        "独自用餐",
+        "早餐"
+      ],
+      "score": 4.2,
+      "avg_price": 1800,
+      "open_hours": "06:30–11:00",
+      "description": "演示设定只提供早餐，适合验证找晚餐时不能仅凭价格低推荐。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1016,
+      "type_id": 1,
+      "name": "津门小馆",
+      "subtitle": "家常津味，聚在一桌",
+      "kind": "天津菜",
+      "city": "天津",
+      "area": "意式风情区",
+      "address": "天津 · 意式风情区 · 演示点位16（虚构地址）",
+      "images": [
+        "public/assets/photos/10.jpg",
+        "public/assets/photos/15.jpg",
+        "public/assets/photos/03.jpg"
+      ],
+      "tags": [
+        "家常口味",
+        "朋友聚餐"
+      ],
+      "score": 4.6,
+      "avg_price": 6800,
+      "open_hours": "11:00–21:30",
+      "description": "以天津风味家常菜为演示内容，适合朋友聚餐；没有真实排队和余位数据。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1017,
+      "type_id": 2,
+      "name": "回声唱吧",
+      "subtitle": "把喜欢的歌，一起唱完",
+      "kind": "量贩KTV",
+      "city": "天津",
+      "area": "南开街区",
+      "address": "天津 · 南开街区 · 演示点位17（虚构地址）",
+      "images": [
+        "public/assets/photos/13.jpg",
+        "public/assets/photos/18.jpg",
+        "public/assets/photos/06.jpg"
+      ],
+      "tags": [
+        "朋友聚会",
+        "预约体验"
+      ],
+      "score": 4.4,
+      "avg_price": 6800,
+      "open_hours": "12:00–次日02:00",
+      "description": "演示设定为小包间唱歌，参考人均不代表包间实时价格，尚不支持预约或选时段。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1018,
+      "type_id": 2,
+      "name": "晚风歌房",
+      "subtitle": "下班之后，给心情换个频道",
+      "kind": "量贩KTV",
+      "city": "天津",
+      "area": "意式风情区",
+      "address": "天津 · 意式风情区 · 演示点位18（虚构地址）",
+      "images": [
+        "public/assets/photos/16.jpg",
+        "public/assets/photos/03.jpg",
+        "public/assets/photos/09.jpg"
+      ],
+      "tags": [
+        "朋友聚会",
+        "夜间小聚"
+      ],
+      "score": 4.6,
+      "avg_price": 10800,
+      "open_hours": "13:00–次日02:00",
+      "description": "演示设定包含多人包间，当前只展示商户资料，不支持实时房态查询。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1019,
+      "type_id": 3,
+      "name": "简线发艺",
+      "subtitle": "清清爽爽，换个新状态",
+      "kind": "理发店",
+      "city": "天津",
+      "area": "南开街区",
+      "address": "天津 · 南开街区 · 演示点位19（虚构地址）",
+      "images": [
+        "public/assets/photos/01.jpg",
+        "public/assets/photos/06.jpg",
+        "public/assets/photos/12.jpg"
+      ],
+      "tags": [
+        "日常护理",
+        "预约体验"
+      ],
+      "score": 4.3,
+      "avg_price": 4500,
+      "open_hours": "09:30–20:30",
+      "description": "演示设定为基础剪发，参考价用于展示排序，具体项目价格未结构化。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1020,
+      "type_id": 3,
+      "name": "梧桐造型室",
+      "subtitle": "为下一次出门，整理好心情",
+      "kind": "造型工作室",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位20（虚构地址）",
+      "images": [
+        "public/assets/photos/04.jpg",
+        "public/assets/photos/09.jpg",
+        "public/assets/photos/15.jpg"
+      ],
+      "tags": [
+        "风格造型",
+        "预约体验"
+      ],
+      "score": 4.6,
+      "avg_price": 12800,
+      "open_hours": "10:00–21:00",
+      "description": "演示设定为预约造型工作室，尚未接入技师排班或预约服务。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1021,
+      "type_id": 10,
+      "name": "小满美甲",
+      "subtitle": "指尖的小变化，留给自己",
+      "kind": "美甲店",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位21（虚构地址）",
+      "images": [
+        "public/assets/photos/07.jpg",
+        "public/assets/photos/12.jpg",
+        "public/assets/photos/18.jpg"
+      ],
+      "tags": [
+        "日常护理",
+        "预约体验"
+      ],
+      "score": 4.4,
+      "avg_price": 7900,
+      "open_hours": "10:00–21:00",
+      "description": "演示设定包含基础款美甲，不提供真实技师、材料品牌或预约信息。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1022,
+      "type_id": 10,
+      "name": "花笺美睫",
+      "subtitle": "空出一点时间，照顾自己",
+      "kind": "美睫工作室",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位22（虚构地址）",
+      "images": [
+        "public/assets/photos/10.jpg",
+        "public/assets/photos/15.jpg",
+        "public/assets/photos/03.jpg"
+      ],
+      "tags": [
+        "精致护理",
+        "预约体验"
+      ],
+      "score": 4.7,
+      "avg_price": 15900,
+      "open_hours": "10:00–20:00",
+      "description": "演示设定为美睫工作室，商户介绍不代表真实服务效果或适用性承诺。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1023,
+      "type_id": 5,
+      "name": "轻步足道",
+      "subtitle": "逛街之后，给脚步放个假",
+      "kind": "足疗店",
+      "city": "天津",
+      "area": "南开街区",
+      "address": "天津 · 南开街区 · 演示点位23（虚构地址）",
+      "images": [
+        "public/assets/photos/13.jpg",
+        "public/assets/photos/18.jpg",
+        "public/assets/photos/06.jpg"
+      ],
+      "tags": [
+        "日常放松",
+        "预约体验"
+      ],
+      "score": 4.4,
+      "avg_price": 8900,
+      "open_hours": "11:00–23:00",
+      "description": "仅作休闲足疗场景展示，不提供诊疗服务或健康效果保证。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1024,
+      "type_id": 5,
+      "name": "河畔舒缓馆",
+      "subtitle": "慢下来，安排一段休息时间",
+      "kind": "按摩店",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位24（虚构地址）",
+      "images": [
+        "public/assets/photos/16.jpg",
+        "public/assets/photos/03.jpg",
+        "public/assets/photos/09.jpg"
+      ],
+      "tags": [
+        "日常放松",
+        "安静环境"
+      ],
+      "score": 4.6,
+      "avg_price": 13900,
+      "open_hours": "10:00–22:00",
+      "description": "演示设定为休闲按摩服务，价格为单次参考，具体服务和禁忌需另行确认。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1025,
+      "type_id": 6,
+      "name": "云间SPA",
+      "subtitle": "把忙碌暂时放在门外",
+      "kind": "SPA馆",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位25（虚构地址）",
+      "images": [
+        "public/assets/photos/01.jpg",
+        "public/assets/photos/06.jpg",
+        "public/assets/photos/12.jpg"
+      ],
+      "tags": [
+        "安静环境",
+        "预约体验"
+      ],
+      "score": 4.7,
+      "avg_price": 23800,
+      "open_hours": "10:00–21:00",
+      "description": "作为高价位休闲服务演示，不提供真实项目排期或功效承诺。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1026,
+      "type_id": 6,
+      "name": "清颜护理室",
+      "subtitle": "给日常留一点细致的照顾",
+      "kind": "美容护理",
+      "city": "天津",
+      "area": "意式风情区",
+      "address": "天津 · 意式风情区 · 演示点位26（虚构地址）",
+      "images": [
+        "public/assets/photos/04.jpg",
+        "public/assets/photos/09.jpg",
+        "public/assets/photos/15.jpg"
+      ],
+      "tags": [
+        "日常护理",
+        "预约体验"
+      ],
+      "score": 4.5,
+      "avg_price": 16800,
+      "open_hours": "10:00–20:30",
+      "description": "演示设定为基础美容护理，未接入项目清单，不能据此推荐医疗美容服务。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1027,
+      "type_id": 7,
+      "name": "积木时光",
+      "subtitle": "把周末，拼成喜欢的样子",
+      "kind": "室内亲子",
+      "city": "天津",
+      "area": "南开街区",
+      "address": "天津 · 南开街区 · 演示点位27（虚构地址）",
+      "images": [
+        "public/assets/photos/07.jpg",
+        "public/assets/photos/12.jpg",
+        "public/assets/photos/18.jpg"
+      ],
+      "tags": [
+        "亲子友好",
+        "室内活动"
+      ],
+      "score": 4.5,
+      "avg_price": 5900,
+      "open_hours": "09:30–19:00",
+      "description": "演示设定为亲子积木活动，实际年龄限制和入场规则尚未录入，需明确提示未知。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1028,
+      "type_id": 7,
+      "name": "小树手作屋",
+      "subtitle": "一起动手，带走一份小作品",
+      "kind": "亲子手作",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位28（虚构地址）",
+      "images": [
+        "public/assets/photos/10.jpg",
+        "public/assets/photos/15.jpg",
+        "public/assets/photos/03.jpg"
+      ],
+      "tags": [
+        "亲子友好",
+        "手作体验"
+      ],
+      "score": 4.6,
+      "avg_price": 9800,
+      "open_hours": "10:00–18:30",
+      "description": "演示设定为亲子手工体验，未接入课程排期、余位或报名。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1029,
+      "type_id": 8,
+      "name": "河湾小酌",
+      "subtitle": "晚上见，聊聊这一周",
+      "kind": "清吧",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位29（虚构地址）",
+      "images": [
+        "public/assets/photos/13.jpg",
+        "public/assets/photos/18.jpg",
+        "public/assets/photos/06.jpg"
+      ],
+      "tags": [
+        "夜间小聚",
+        "朋友聚会"
+      ],
+      "score": 4.5,
+      "avg_price": 8800,
+      "open_hours": "18:00–次日01:00",
+      "description": "演示设定为成人休闲清吧，不应作为亲子活动推荐，未提供实时演出信息。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1030,
+      "type_id": 8,
+      "name": "留白酒馆",
+      "subtitle": "灯亮的时候，换一种慢节奏",
+      "kind": "酒馆",
+      "city": "天津",
+      "area": "意式风情区",
+      "address": "天津 · 意式风情区 · 演示点位30（虚构地址）",
+      "images": [
+        "public/assets/photos/16.jpg",
+        "public/assets/photos/03.jpg",
+        "public/assets/photos/09.jpg"
+      ],
+      "tags": [
+        "夜间小聚",
+        "成人休闲"
+      ],
+      "score": 4.6,
+      "avg_price": 12800,
+      "open_hours": "18:00–次日02:00",
+      "description": "演示设定为成人酒馆场景，饮品清单和即时活动未接入。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1031,
+      "type_id": 9,
+      "name": "聚光派对屋",
+      "subtitle": "把大家，约到同一个地方",
+      "kind": "轰趴馆",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位31（虚构地址）",
+      "images": [
+        "public/assets/photos/01.jpg",
+        "public/assets/photos/06.jpg",
+        "public/assets/photos/12.jpg"
+      ],
+      "tags": [
+        "多人聚会",
+        "预约体验"
+      ],
+      "score": 4.4,
+      "avg_price": 15800,
+      "open_hours": "10:00–23:00",
+      "description": "演示设定为多人聚会场地，人均参考不能直接替代整场包场报价。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1032,
+      "type_id": 9,
+      "name": "周末客厅",
+      "subtitle": "周末的节目，一起商量",
+      "kind": "轰趴馆",
+      "city": "天津",
+      "area": "意式风情区",
+      "address": "天津 · 意式风情区 · 演示点位32（虚构地址）",
+      "images": [
+        "public/assets/photos/04.jpg",
+        "public/assets/photos/09.jpg",
+        "public/assets/photos/15.jpg"
+      ],
+      "tags": [
+        "多人聚会",
+        "桌游聚会"
+      ],
+      "score": 4.3,
+      "avg_price": 11800,
+      "open_hours": "10:00–22:00",
+      "description": "演示设定包含桌游与聚会空间，当前没有包场日期或容量确认接口。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1033,
+      "type_id": 4,
+      "name": "津动训练站",
+      "subtitle": "把今天的一点时间，留给运动",
+      "kind": "健身房",
+      "city": "天津",
+      "area": "海河沿线",
+      "address": "天津 · 海河沿线 · 演示点位33（虚构地址）",
+      "images": [
+        "public/assets/photos/07.jpg",
+        "public/assets/photos/12.jpg",
+        "public/assets/photos/18.jpg"
+      ],
+      "tags": [
+        "运动健身",
+        "单次体验"
+      ],
+      "score": 4.4,
+      "avg_price": 3900,
+      "open_hours": "07:00–22:00",
+      "description": "演示参考价按单次体验设定，不代表月卡价格；没有器械实时占用信息。 商户资料为虚构演示，图片为复用示意。"
+    },
+    {
+      "id": 1034,
+      "type_id": 4,
+      "name": "慢伸瑜伽室",
+      "subtitle": "跟着呼吸，换一个轻松节奏",
+      "kind": "瑜伽馆",
+      "city": "天津",
+      "area": "五大道",
+      "address": "天津 · 五大道 · 演示点位34（虚构地址）",
+      "images": [
+        "public/assets/photos/10.jpg",
+        "public/assets/photos/15.jpg",
+        "public/assets/photos/03.jpg"
+      ],
+      "tags": [
+        "运动健身",
+        "预约体验"
+      ],
+      "score": 4.6,
+      "avg_price": 8900,
+      "open_hours": "08:00–21:00",
+      "description": "演示设定为入门瑜伽体验，未接入课程排期，不能保证任意时间可参加。 商户资料为虚构演示，图片为复用示意。"
+    }
+  ],
+  "vouchers": [
+    {
+      "id": 2001,
+      "shop_id": 1001,
+      "title": "100 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 100 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 8800,
+      "actual_value": 10000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2002,
+      "shop_id": 1002,
+      "title": "30 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 30 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 2600,
+      "actual_value": 3000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2003,
+      "shop_id": 1003,
+      "title": "100 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 100 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 8500,
+      "actual_value": 10000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2004,
+      "shop_id": 1005,
+      "title": "50 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 50 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 4200,
+      "actual_value": 5000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2005,
+      "shop_id": 1006,
+      "title": "50 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 50 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 4200,
+      "actual_value": 5000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2006,
+      "shop_id": 1007,
+      "title": "40 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 40 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 3400,
+      "actual_value": 4000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2007,
+      "shop_id": 1008,
+      "title": "80 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 80 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 6800,
+      "actual_value": 8000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2008,
+      "shop_id": 1009,
+      "title": "100 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 100 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 8600,
+      "actual_value": 10000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2009,
+      "shop_id": 1010,
+      "title": "100 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 100 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 8900,
+      "actual_value": 10000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2010,
+      "shop_id": 1011,
+      "title": "150 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 150 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 12800,
+      "actual_value": 15000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2011,
+      "shop_id": 1013,
+      "title": "200 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 200 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 17500,
+      "actual_value": 20000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    },
+    {
+      "id": 2012,
+      "shop_id": 1016,
+      "title": "100 元店铺代金券",
+      "sub_title": "先读使用规则，再安排你的优惠",
+      "rules": [
+        "单次消费满 100 元可用，每次限用一张",
+        "不可与店内其他优惠叠加；不支持拆分使用",
+        "虚构演示优惠券，可创建与取消订单，不涉及真实支付或核销"
+      ],
+      "pay_value": 8800,
+      "actual_value": 10000,
+      "type": 0,
+      "status": 1,
+      "total_stock": 50,
+      "stock": 50,
+      "validity_days": 30
+    }
+  ]
+}

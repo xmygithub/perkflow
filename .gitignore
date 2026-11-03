@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Frontend
+node_modules/
+dist/
+coverage/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Editor and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Runtime files
+*.log
+.local/loadtest/
+.local/order-performance/
+.local/perf-unit-*/
+
+# Local chat attachments
+.codex-remote-attachments/
+
+# Private notes, collaboration instructions, local results and history backups
+/docs/
+/.local/
+/AGENTS.md

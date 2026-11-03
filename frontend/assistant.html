@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#216b5b">
+  <title>PerkFlow · 团购选购助手</title>
+  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="src/assistant.css">
+  <script type="module" src="src/assistant-page.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到助手</a>
+  <header><div class="header-inner"><a class="brand" href="index.html"><span class="brand-symbol">P</span><span>PerkFlow<span class="brand-sub">你的城市出门清单</span></span></a><nav class="main-nav" aria-label="主导航"><a href="index.html">发现</a><a href="shop-list.html">好店</a><a href="vouchers.html">优惠券</a><a href="assistant.html" class="active" aria-current="page">选购助手</a><a href="orders.html">我的订单</a></nav></div></header>
+  <main class="page-shell assistant-shell" id="main">
+    <section class="assistant-heading"><div><span class="section-eyebrow">PERKFLOW / 团购选购</span><h1>还没想好？一起找找值得买的。</h1><p>探索、比较，再确认。只有你点击购买确认才会提交订单，不涉及真实支付。</p></div><button class="button outline" id="new-chat" type="button">新建会话</button></section>
+    <p id="assistant-notice" class="notice" role="status" aria-live="polite">正在检查登录与助手配置…</p>
+    <section class="panel assistant-purchase" id="account-purchases-panel" hidden aria-labelledby="account-purchases-title"><h2 id="account-purchases-title">找回购买记录</h2><p>这里保存这个账号在助手中确认过的购买。切换或关闭会话后，仍可回查并打开原会话；不会重新下单。</p><div class="assistant-actions"><label for="account-purchase-scope">查看范围</label><select id="account-purchase-scope"><option value="all">全部记录</option><option value="unresolved">只看未决购买</option></select><button class="button outline" id="refresh-account-purchases" type="button">刷新购买记录</button></div><p id="account-purchase-summary"></p><p id="account-purchase-feedback" role="status" aria-live="polite"></p><div id="account-purchases"></div><div class="assistant-actions"><button class="button outline" id="account-purchases-prev" type="button">上一页</button><span id="account-purchases-page"></span><button class="button outline" id="account-purchases-next" type="button">下一页</button></div></section>
+    <div class="assistant-layout">
+      <section class="panel assistant-chat" aria-labelledby="chat-title"><h2 id="chat-title">聊聊这次安排</h2><div id="messages" class="assistant-messages" aria-live="polite"></div>
+        <div id="purchase-entry" class="assistant-confirm-entry" hidden><p id="purchase-entry-summary"></p><button class="button primary" id="show-purchase" type="button">查看购买确认</button><p class="assistant-footnote">此入口只定位到确认卡，核对并点击“确认创建订单”后才会提交。</p></div>
+        <form id="assistant-form"><label for="assistant-input">用平时说话的方式描述就好，不必先填齐条件</label><textarea id="assistant-input" maxlength="2000" rows="3" placeholder="帮我找个火锅团购，划算一点。" required></textarea><div class="assistant-actions"><button class="button primary" id="send" disabled>发送需求</button><button class="button outline" id="stop" type="button" hidden>停止本轮</button><span id="phase" role="status">等待输入</span></div></form>
+        <p class="assistant-footnote">资料和套餐均为虚构演示。模型解释可能出错，请以规则校验卡片为依据；下单与真实支付是不同状态。</p>
+      </section>
+      <aside class="assistant-sidebar"><section class="panel"><h2>这次想做什么</h2><p id="goal"></p><h3>已知条件</h3><dl id="requirements" class="assistant-requirements"></dl><h3>可以权衡的偏好</h3><dl id="preferences" class="assistant-requirements"></dl><p id="preferences-empty" class="assistant-footnote">暂未限定，可以先看看。</p><p class="assistant-footnote">未确定的条件先保留未知，不代表不能搜索。</p></section><section class="panel" id="questions-panel" hidden><h2>接下来想确认</h2><ul id="questions"></ul></section><section class="panel"><h2>执行进度</h2><p class="assistant-footnote">来自真实执行事件，不展示内部思维链。</p><ol id="timeline" class="assistant-timeline" aria-live="polite"></ol></section></aside>
+    </div>
+    <section class="assistant-results" aria-labelledby="results-title"><h2 id="results-title">先看看这些，再作决定</h2><p>可说“第二个怎么样”继续了解，或比较当前候选。编号以上一轮页面为准，价格和库存是查询快照。</p><button class="button outline" id="compare-choices" type="button" hidden>比较当前候选</button><div id="cards" class="assistant-cards"></div></section>
+    <section class="panel assistant-comparison" id="comparison-panel" hidden aria-labelledby="comparison-title"><h2 id="comparison-title">方案对比</h2><p class="assistant-footnote">使用当前条件与本轮查询快照比较；未知不代表可用，券价不等于整餐总价。</p><div class="assistant-table-scroll"><table id="comparison-table"><caption class="assistant-footnote">价格、适用规则与待确认项</caption></table></div></section>
+    <section class="panel assistant-purchase" id="purchase-panel" hidden aria-labelledby="purchase-title"><h2 id="purchase-title" tabindex="-1">购买前请确认</h2><div id="purchase-summary"></div><label id="unknown-consent-row" hidden><input type="checkbox" id="unknown-consent">我已阅读尚未确认的条件，仍选择购买此券；不代表适用性已确认。</label><p class="assistant-footnote">确认有效期5分钟，限1张。价格或规则变化需重新确认；创建订单不代表已支付。</p><button class="button primary" id="confirm-purchase" type="button">确认创建订单</button></section>
+    <section class="panel assistant-purchase" id="purchase-progress-panel" hidden aria-labelledby="purchase-progress-title"><h2 id="purchase-progress-title" tabindex="-1">本会话购买进度</h2><div id="purchase-progress" aria-live="polite"></div><button class="button outline" id="refresh-purchases" type="button">回查原购买结果</button><p id="purchase-feedback" role="status" aria-live="polite"></p><p class="assistant-footnote">重新核对只查询商品并生成新的确认内容，仍需你点击确认才会提交。回查只读取原购买记录，已失败的历史记录不会因此重试。</p></section>
+  </main>
+</body>
+</html>

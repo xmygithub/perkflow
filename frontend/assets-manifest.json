@@ -1,0 +1,174 @@
+{
+  "repository": "https://github.com/Vanzaseses/hmdp",
+  "commit": "25189fc1230557fd694100013748c880bcfee01b",
+  "files": [
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/KTV.png",
+      "destination": "public/assets/categories/KTV.png",
+      "gitBlobSha": "d40242b5d347504172fee3a91547932968fd33cc",
+      "size": 2225
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/amzl.png",
+      "destination": "public/assets/categories/amzl.png",
+      "gitBlobSha": "0ffa9ea3ae2cc15a5c734d9b2a84c8276ccc348f",
+      "size": 2931
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/hpg.png",
+      "destination": "public/assets/categories/hpg.png",
+      "gitBlobSha": "6c0193afbb4d46fe9fdbf3fdfcb9cadb2fe753ee",
+      "size": 3211
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/jiuba.png",
+      "destination": "public/assets/categories/jiuba.png",
+      "gitBlobSha": "e63de1387ee890e3419014a0dc0ed95c9e4f93f5",
+      "size": 2774
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/jsyd.png",
+      "destination": "public/assets/categories/jsyd.png",
+      "gitBlobSha": "a792ee0c12f709161aacb2d1b3c81847565cd03d",
+      "size": 2174
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/lrmf.png",
+      "destination": "public/assets/categories/lrmf.png",
+      "gitBlobSha": "2197c389ada151f6c00011959b1b8521db83689b",
+      "size": 4543
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/mjmj.png",
+      "destination": "public/assets/categories/mjmj.png",
+      "gitBlobSha": "07125fbe4e31049eddb931bece2b07f97fc472e4",
+      "size": 2452
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/ms.png",
+      "destination": "public/assets/categories/ms.png",
+      "gitBlobSha": "079ff05927b9e0576ff878ddfcdeda072cc60cf5",
+      "size": 2780
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/qzyl.png",
+      "destination": "public/assets/categories/qzyl.png",
+      "gitBlobSha": "2bca451304eeaa3736b05f53503825c025f0b1fd",
+      "size": 3780
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/types/spa.png",
+      "destination": "public/assets/categories/spa.png",
+      "gitBlobSha": "cf19f50d4a59760788d2eafeb6b582cd932428b8",
+      "size": 3139
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/0/0/feb2a83e-5646-46c0-a982-5e43fed31b22.jpg",
+      "destination": "public/assets/photos/01.jpg",
+      "gitBlobSha": "0e17ea3d295b05c2fbb9ad2b4928f0c6cfa6d8ee",
+      "size": 87950
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/0/5/e3e7c9e7-6654-4065-b47a-b86eb4541c33.jpg",
+      "destination": "public/assets/photos/02.jpg",
+      "gitBlobSha": "2ab732dc0770cd182d243c0770ea9c2735bd3826",
+      "size": 115547
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/1/2/4a7b496b-2a08-4af7-aa95-df2c3bd0ef97.jpg",
+      "destination": "public/assets/photos/03.jpg",
+      "gitBlobSha": "d28fc775cfffb69b2c49fb2f8dbe4e0acf0804e4",
+      "size": 71990
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/1/2/f052df92-fc05-41a6-866e-d6da63b27645.jpg",
+      "destination": "public/assets/photos/04.jpg",
+      "gitBlobSha": "aa4636cf43adb4c5ca89f7a05d9a81508d6f72d4",
+      "size": 77086
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/10/11/cf6348ba-b2d9-47c9-ba3f-6bf9cba6cb25.jpg",
+      "destination": "public/assets/photos/05.jpg",
+      "gitBlobSha": "7ff63e7b54c8a268338f902d3d2c195a89b306af",
+      "size": 545950
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/10/7/7e97f47d-eb49-4dc9-a583-95faa7aed287.jpg",
+      "destination": "public/assets/photos/06.jpg",
+      "gitBlobSha": "f95ddf9ada78244e4f7381bbb77771cfe990f335",
+      "size": 80214
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/11/12/8b37d208-9414-4e78-b065-9199647bb3e3.jpg",
+      "destination": "public/assets/photos/07.jpg",
+      "gitBlobSha": "f80a0c9f6ddf912194975256951b64fd7d76b859",
+      "size": 184272
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/12/1/1afd01e5-0e16-43c2-b655-4bf733f95cfc.jpg",
+      "destination": "public/assets/photos/08.jpg",
+      "gitBlobSha": "6d4164c2e86e14930309c194416da8ab47876f15",
+      "size": 123384
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/12/4/f0369e16-d965-4ee6-8fd9-cfd65a3bd854.jpg",
+      "destination": "public/assets/photos/09.jpg",
+      "gitBlobSha": "c4a81c88184757932eb325bfddc713deb637449f",
+      "size": 260564
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/13/1/6b091b4c-7870-4df8-9b21-5db9852db005.jpg",
+      "destination": "public/assets/photos/10.jpg",
+      "gitBlobSha": "c97c610927a76e22f46f8abb8d8f3d13fa9fad75",
+      "size": 166338
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/13/15/24e39ee1-9ad6-4cc3-b066-122a41e14878.jpg",
+      "destination": "public/assets/photos/11.jpg",
+      "gitBlobSha": "59c84acf6eb73d851a308f0e8ff77381a2916af7",
+      "size": 394698
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/14/0/659fe4f1-15a0-47eb-b960-5ecfe9222931.jpg",
+      "destination": "public/assets/photos/12.jpg",
+      "gitBlobSha": "ec389ced931f1e51c2adbef17a75bc3cdf6c727f",
+      "size": 218050
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/14/3/52b290eb-8b5d-403b-8373-ba0bb856d18e.jpg",
+      "destination": "public/assets/photos/13.jpg",
+      "gitBlobSha": "0b778ed794c013fd8b93fa3fd50161ad47154862",
+      "size": 73018
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/15/14/92afffba-5d49-4348-9923-9107aeee7008.jpg",
+      "destination": "public/assets/photos/14.jpg",
+      "gitBlobSha": "5cbcfb06fd6be3207dd857b0153f97c2987c6af3",
+      "size": 242265
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/15/9/cea51d9b-ac15-49f6-b9f1-9cf81e9b9c85.jpg",
+      "destination": "public/assets/photos/15.jpg",
+      "gitBlobSha": "2f657befbf1a47414fa2385c56eafab2491b2764",
+      "size": 176464
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/2/2/7fc130a4-67b7-4339-9626-9680b198d9a0.jpg",
+      "destination": "public/assets/photos/16.jpg",
+      "gitBlobSha": "6146d3df0defb9b208b885d28b1595860a75e7ae",
+      "size": 241992
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/2/3/39d65be4-af94-458d-b6de-bc8ca20735bb.jpg",
+      "destination": "public/assets/photos/17.jpg",
+      "gitBlobSha": "add3d1aaff82012aca7b1202b9f4dcf706ea790e",
+      "size": 116108
+    },
+    {
+      "source": "nginx-1.18.0/html/hmdp/imgs/blogs/2/6/b0756279-65da-4f2d-b62a-33f74b06454a.jpg",
+      "destination": "public/assets/photos/18.jpg",
+      "gitBlobSha": "8c6b0d54139287f97a0879dd33f88a00807d2965",
+      "size": 93524
+    }
+  ]
+}
